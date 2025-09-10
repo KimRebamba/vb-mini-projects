@@ -1,0 +1,5 @@
+C:\Users\Kim\Documents\Applications\SW5 - Two Games (using Graphics)\Game_with_Graphics.exe
+C:\Users\Kim\Documents\Applications\SW5 - Two Games (using Graphics)\Game_with_Graphics.dll
+C:\Users\Kim\Documents\Applications\SW5 - Two Games (using Graphics)\Game_with_Graphics.deps.json
+C:\Users\Kim\Documents\Applications\SW5 - Two Games (using Graphics)\Game_with_Graphics.runtimeconfig.json
+C:\Users\Kim\Documents\Applications\SW5 - Two Games (using Graphics)\Game_with_Graphics.pdb

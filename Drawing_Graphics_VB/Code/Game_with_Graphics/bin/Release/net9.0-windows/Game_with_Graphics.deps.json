@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Game_with_Graphics/1.0.0": {
+        "runtime": {
+          "Game_with_Graphics.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Game_with_Graphics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\Kalkue.exe
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\Kalkue.deps.json
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\Kalkue.runtimeconfig.json
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\Kalkue.dll
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\Kalkue.pdb
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.Form1.resources
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.vbproj.GenerateResource.cache
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.AssemblyInfoInputs.cache
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.AssemblyInfo.vb
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.vbproj.CoreCompileInputs.cache
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.dll
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\refint\Kalkue.dll
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.pdb
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\Kalkue.genruntimeconfig.cache
+C:\Users\Kim\Desktop\visual-basic\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\ref\Kalkue.dll

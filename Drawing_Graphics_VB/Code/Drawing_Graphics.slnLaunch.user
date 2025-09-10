@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Game_with_Graphics\\Drawing_Flags.vbproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

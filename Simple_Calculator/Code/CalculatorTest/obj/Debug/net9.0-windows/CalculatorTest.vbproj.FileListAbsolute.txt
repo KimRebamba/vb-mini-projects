@@ -1,0 +1,16 @@
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\CalculatorTest.exe
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\CalculatorTest.deps.json
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\CalculatorTest.runtimeconfig.json
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\CalculatorTest.dll
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\bin\Debug\net9.0-windows\CalculatorTest.pdb
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.Form1.resources
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.vbproj.GenerateResource.cache
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.AssemblyInfoInputs.cache
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.AssemblyInfo.vb
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.vbproj.CoreCompileInputs.cache
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.dll
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\refint\CalculatorTest.dll
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.pdb
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\CalculatorTest.genruntimeconfig.cache
+C:\Users\Kim\source\repos\CalculatorTest\CalculatorTest\obj\Debug\net9.0-windows\ref\CalculatorTest.dll
