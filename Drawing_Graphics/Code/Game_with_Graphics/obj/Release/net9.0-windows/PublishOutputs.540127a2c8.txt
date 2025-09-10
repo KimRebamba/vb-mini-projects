@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\vb-projects\Drawing_Flags.exe
-C:\Users\Kim\Desktop\vb-projects\Drawing_Flags.dll
-C:\Users\Kim\Desktop\vb-projects\Drawing_Flags.deps.json
-C:\Users\Kim\Desktop\vb-projects\Drawing_Flags.runtimeconfig.json
-C:\Users\Kim\Desktop\vb-projects\Drawing_Flags.pdb

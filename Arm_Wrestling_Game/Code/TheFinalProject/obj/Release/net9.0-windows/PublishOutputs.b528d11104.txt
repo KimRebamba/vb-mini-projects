@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\NEW APPLICATIONS\FINAL PROJECT\TheFinalProject.exe
-C:\Users\Kim\Desktop\NEW APPLICATIONS\FINAL PROJECT\TheFinalProject.dll
-C:\Users\Kim\Desktop\NEW APPLICATIONS\FINAL PROJECT\TheFinalProject.deps.json
-C:\Users\Kim\Desktop\NEW APPLICATIONS\FINAL PROJECT\TheFinalProject.runtimeconfig.json
-C:\Users\Kim\Desktop\NEW APPLICATIONS\FINAL PROJECT\TheFinalProject.pdb

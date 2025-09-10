@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\vb-projects\Simple_Calculator\Kalkue.exe
-C:\Users\Kim\Desktop\vb-projects\Simple_Calculator\Kalkue.dll
-C:\Users\Kim\Desktop\vb-projects\Simple_Calculator\Kalkue.deps.json
-C:\Users\Kim\Desktop\vb-projects\Simple_Calculator\Kalkue.runtimeconfig.json
-C:\Users\Kim\Desktop\vb-projects\Simple_Calculator\Kalkue.pdb

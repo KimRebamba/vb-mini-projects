@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\vb-projects\School_App\SchoolApp.exe
-C:\Users\Kim\Desktop\vb-projects\School_App\SchoolApp.dll
-C:\Users\Kim\Desktop\vb-projects\School_App\SchoolApp.deps.json
-C:\Users\Kim\Desktop\vb-projects\School_App\SchoolApp.runtimeconfig.json
-C:\Users\Kim\Desktop\vb-projects\School_App\SchoolApp.pdb

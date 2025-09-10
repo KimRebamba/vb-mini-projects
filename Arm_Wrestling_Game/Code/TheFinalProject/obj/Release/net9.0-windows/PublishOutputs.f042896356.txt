@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\ARM by Kim\TheFinalProject.exe
-C:\Users\Kim\Desktop\ARM by Kim\TheFinalProject.dll
-C:\Users\Kim\Desktop\ARM by Kim\TheFinalProject.deps.json
-C:\Users\Kim\Desktop\ARM by Kim\TheFinalProject.runtimeconfig.json
-C:\Users\Kim\Desktop\ARM by Kim\TheFinalProject.pdb

@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\vb-projects\vb-mini-projects\Arm_Wrestling_Game\TheFinalProject.exe
-C:\Users\Kim\Desktop\vb-projects\vb-mini-projects\Arm_Wrestling_Game\TheFinalProject.dll
-C:\Users\Kim\Desktop\vb-projects\vb-mini-projects\Arm_Wrestling_Game\TheFinalProject.deps.json
-C:\Users\Kim\Desktop\vb-projects\vb-mini-projects\Arm_Wrestling_Game\TheFinalProject.runtimeconfig.json
-C:\Users\Kim\Desktop\vb-projects\vb-mini-projects\Arm_Wrestling_Game\TheFinalProject.pdb

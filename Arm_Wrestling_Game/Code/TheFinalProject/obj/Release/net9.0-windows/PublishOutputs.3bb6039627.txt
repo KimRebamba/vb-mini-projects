@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\FINAL GAME\TheFinalProject.exe
-C:\Users\Kim\Desktop\FINAL GAME\TheFinalProject.dll
-C:\Users\Kim\Desktop\FINAL GAME\TheFinalProject.deps.json
-C:\Users\Kim\Desktop\FINAL GAME\TheFinalProject.runtimeconfig.json
-C:\Users\Kim\Desktop\FINAL GAME\TheFinalProject.pdb

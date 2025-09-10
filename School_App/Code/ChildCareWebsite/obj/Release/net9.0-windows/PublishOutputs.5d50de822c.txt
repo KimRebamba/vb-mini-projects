@@ -1,5 +1,0 @@
-C:\Users\Kim\Desktop\NEW APPLICATIONS\SW7 - WEBSITE\ChildCareWebsite.exe
-C:\Users\Kim\Desktop\NEW APPLICATIONS\SW7 - WEBSITE\ChildCareWebsite.dll
-C:\Users\Kim\Desktop\NEW APPLICATIONS\SW7 - WEBSITE\ChildCareWebsite.deps.json
-C:\Users\Kim\Desktop\NEW APPLICATIONS\SW7 - WEBSITE\ChildCareWebsite.runtimeconfig.json
-C:\Users\Kim\Desktop\NEW APPLICATIONS\SW7 - WEBSITE\ChildCareWebsite.pdb
