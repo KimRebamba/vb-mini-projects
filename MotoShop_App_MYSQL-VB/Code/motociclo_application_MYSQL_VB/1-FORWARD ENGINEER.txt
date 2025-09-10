@@ -1,0 +1,341 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema motociclo_db
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema motociclo_db
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `motociclo_db` DEFAULT CHARACTER SET utf8 ;
+USE `motociclo_db` ;
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`accounts`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`accounts` (
+  `user_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(40) NOT NULL,
+  `email` VARCHAR(100) NULL DEFAULT NULL,
+  `address` VARCHAR(255) NULL DEFAULT NULL,
+  `phone_number` VARCHAR(11) NULL DEFAULT NULL,
+  `role` ENUM('admin', 'employee', 'customer') NOT NULL DEFAULT 'customer',
+  `date_created` DATE NULL DEFAULT NULL,
+  `first_name` VARCHAR(45) NULL DEFAULT NULL,
+  `last_name` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 8
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`branches`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`branches` (
+  `branch_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `branch_name` VARCHAR(100) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `phone_number` VARCHAR(11) NULL DEFAULT NULL,
+  `photo` BLOB NULL DEFAULT NULL,
+  PRIMARY KEY (`branch_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`suppliers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`suppliers` (
+  `supplier_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `supplier_name` VARCHAR(100) NOT NULL,
+  `contact_person` VARCHAR(100) NOT NULL,
+  `contact_number` VARCHAR(11) NOT NULL,
+  `address` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`supplier_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`models`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`models` (
+  `model_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `model_name` VARCHAR(100) NOT NULL,
+  `photo` BLOB NULL DEFAULT NULL,
+  `brand` VARCHAR(100) NULL DEFAULT NULL,
+  `year_model` YEAR(4) NULL DEFAULT NULL,
+  `type` ENUM('Scooter', 'Sportbike', 'Off-road', 'Electric', 'Moped', 'Other') NULL DEFAULT NULL,
+  `transmission` ENUM('Manual', 'Automatic', 'CVT') NULL DEFAULT NULL,
+  `price` DECIMAL(10,2) NULL DEFAULT NULL,
+  `cost_price` DECIMAL(10,2) NULL DEFAULT NULL,
+  `supplier_id` INT(11) NOT NULL,
+  PRIMARY KEY (`model_id`),
+  INDEX `fk_models_suppliers1_idx` (`supplier_id` ASC) VISIBLE,
+  CONSTRAINT `fk_models_suppliers1`
+    FOREIGN KEY (`supplier_id`)
+    REFERENCES `motociclo_db`.`suppliers` (`supplier_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`branch_model`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`branch_model` (
+  `branch_id` INT(11) NOT NULL,
+  `model_id` INT(11) NOT NULL,
+  `stock` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`branch_id`, `model_id`),
+  INDEX `fk_branches_has_models_models1_idx` (`model_id` ASC) VISIBLE,
+  INDEX `fk_branches_has_models_branches1_idx` (`branch_id` ASC) VISIBLE,
+  CONSTRAINT `fk_branches_has_models_branches1`
+    FOREIGN KEY (`branch_id`)
+    REFERENCES `motociclo_db`.`branches` (`branch_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_branches_has_models_models1`
+    FOREIGN KEY (`model_id`)
+    REFERENCES `motociclo_db`.`models` (`model_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`cart`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`cart` (
+  `cart_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `user_id` INT(11) NOT NULL,
+  `model_id` INT(11) NOT NULL,
+  `branch_id` INT(11) NOT NULL,
+  `quantity` INT(11) NOT NULL,
+  `date_added` DATETIME NOT NULL,
+  PRIMARY KEY (`cart_id`),
+  INDEX `fk_cart_accounts1_idx` (`user_id` ASC) VISIBLE,
+  INDEX `fk_cart_models1_idx` (`model_id` ASC) VISIBLE,
+  INDEX `fk_cart_branches1_idx` (`branch_id` ASC) VISIBLE,
+  CONSTRAINT `fk_cart_accounts1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `motociclo_db`.`accounts` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cart_branches1`
+    FOREIGN KEY (`branch_id`)
+    REFERENCES `motociclo_db`.`branches` (`branch_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cart_models1`
+    FOREIGN KEY (`model_id`)
+    REFERENCES `motociclo_db`.`models` (`model_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`positions`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`positions` (
+  `position_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `position_name` VARCHAR(100) NULL DEFAULT NULL,
+  `monthly_rate` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`position_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`employees`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`employees` (
+  `emp_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `birth_date` DATE NOT NULL,
+  `gender` ENUM('M', 'F') NOT NULL,
+  `employment_status` ENUM('active', 'on_leave', 'fired') NOT NULL DEFAULT 'active',
+  `user_id` INT(11) NOT NULL,
+  `current_branch_id` INT(11) NULL DEFAULT NULL,
+  `current_position_id` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`emp_id`),
+  INDEX `fk_employees_accounts1_idx` (`user_id` ASC) VISIBLE,
+  INDEX `current_branch_id` (`current_branch_id` ASC) VISIBLE,
+  INDEX `current_position_id` (`current_position_id` ASC) VISIBLE,
+  CONSTRAINT `employees_ibfk_1`
+    FOREIGN KEY (`current_branch_id`)
+    REFERENCES `motociclo_db`.`branches` (`branch_id`),
+  CONSTRAINT `employees_ibfk_2`
+    FOREIGN KEY (`current_position_id`)
+    REFERENCES `motociclo_db`.`positions` (`position_id`),
+  CONSTRAINT `fk_employees_accounts1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `motociclo_db`.`accounts` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`expenses`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`expenses` (
+  `exp_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `branch_id` INT(11) NOT NULL,
+  `expense_type` ENUM('Electricity', 'Water', 'Rent', 'Salaries', 'Supplies', 'Maintenance', 'Marketing', 'Others') NOT NULL,
+  `fee` DECIMAL(10,2) NOT NULL,
+  `status` ENUM('Paid', 'Overdue', 'Processing', 'Cancelled') NOT NULL,
+  `from_date` DATE NOT NULL,
+  `due_date` DATE NOT NULL,
+  PRIMARY KEY (`exp_id`),
+  INDEX `fk_expenses_branches1_idx` (`branch_id` ASC) VISIBLE,
+  CONSTRAINT `fk_expenses_branches1`
+    FOREIGN KEY (`branch_id`)
+    REFERENCES `motociclo_db`.`branches` (`branch_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`vouchers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`vouchers` (
+  `voucher_code` VARCHAR(5) NOT NULL,
+  `percent_sale` INT(11) NOT NULL,
+  `to_date` DATE NOT NULL,
+  `from_date` DATE NULL DEFAULT NULL,
+  `status` ENUM('active', 'expired', 'used', 'inactive') NOT NULL,
+  PRIMARY KEY (`voucher_code`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`orders`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`orders` (
+  `order_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `date_ordered` DATETIME NOT NULL,
+  `est_delivery` DATE NOT NULL,
+  `order_status` ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled', 'returned') NOT NULL,
+  `payment_status` ENUM('pending', 'paid', 'refunded', 'failed') NOT NULL,
+  `payment_option` ENUM('cash', 'ATM') NOT NULL,
+  `user_id` INT(11) NOT NULL,
+  `voucher_code` VARCHAR(5) NULL DEFAULT NULL,
+  PRIMARY KEY (`order_id`),
+  INDEX `fk_orders_accounts1_idx` (`user_id` ASC) VISIBLE,
+  INDEX `fk_orders_vouchers1_idx` (`voucher_code` ASC) VISIBLE,
+  CONSTRAINT `fk_orders_accounts1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `motociclo_db`.`accounts` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_orders_vouchers1`
+    FOREIGN KEY (`voucher_code`)
+    REFERENCES `motociclo_db`.`vouchers` (`voucher_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`order_items`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`order_items` (
+  `order_id` INT(11) NOT NULL,
+  `model_id` INT(11) NOT NULL,
+  `branch_id` INT(11) NOT NULL,
+  `quantity` INT(11) NOT NULL,
+  `unit_price` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`branch_id`, `model_id`, `order_id`),
+  INDEX `fk_order_item_id_orders1_idx` (`order_id` ASC) VISIBLE,
+  INDEX `fk_order_items_models1_idx` (`model_id` ASC) VISIBLE,
+  INDEX `fk_order_items_branches1_idx` (`branch_id` ASC) VISIBLE,
+  CONSTRAINT `fk_order_item_id_orders1`
+    FOREIGN KEY (`order_id`)
+    REFERENCES `motociclo_db`.`orders` (`order_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_order_items_branches1`
+    FOREIGN KEY (`branch_id`)
+    REFERENCES `motociclo_db`.`branches` (`branch_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_order_items_models1`
+    FOREIGN KEY (`model_id`)
+    REFERENCES `motociclo_db`.`models` (`model_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`returns`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`returns` (
+  `return_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `order_id` INT(11) NOT NULL,
+  `return_date` DATETIME NOT NULL,
+  `reason` VARCHAR(255) NOT NULL,
+  `condition_` ENUM('Damaged', 'Defect', 'Others') NULL DEFAULT NULL,
+  `return_status` ENUM('Approved', 'Rejected', 'Pending') NULL DEFAULT NULL,
+  `quantity_returned` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`return_id`),
+  INDEX `fk_returns_orders1_idx` (`order_id` ASC) VISIBLE,
+  CONSTRAINT `fk_returns_orders1`
+    FOREIGN KEY (`order_id`)
+    REFERENCES `motociclo_db`.`orders` (`order_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `motociclo_db`.`salaries`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `motociclo_db`.`salaries` (
+  `salary_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `pay_date` DATE NULL DEFAULT NULL,
+  `rate_used` DECIMAL(10,2) NOT NULL,
+  `status` ENUM('pending', 'paid', 'overdue') NOT NULL,
+  `emp_id` INT(11) NOT NULL,
+  `from_date` DATE NOT NULL,
+  `to_date` DATE NOT NULL,
+  PRIMARY KEY (`salary_id`),
+  INDEX `fk_salaries_employees1_idx` (`emp_id` ASC) VISIBLE,
+  CONSTRAINT `fk_salaries_employees1`
+    FOREIGN KEY (`emp_id`)
+    REFERENCES `motociclo_db`.`employees` (`emp_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

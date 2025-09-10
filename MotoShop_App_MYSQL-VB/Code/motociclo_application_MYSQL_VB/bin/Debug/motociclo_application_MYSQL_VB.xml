@@ -1,0 +1,152 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+motociclo_application_MYSQL_VB
+</name>
+</assembly>
+<members>
+<member name="T:motociclo_application_MYSQL_VB.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources._2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.account_page">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.account_page1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.account_signup_011">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.ad_emplogo_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.branch_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.cart_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.cart_01_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.ducati">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.ducatiii">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.emp_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.extra">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.home_page">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.load">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.logo_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.mtoor_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.newestlogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.newlogo_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.profile_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.search_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.square_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.My.Resources.Resources.Yellow_And_White_Modern_Motorcycle_Services_Facebook_Cover">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:motociclo_application_MYSQL_VB.emp_pageResources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.emp_pageResources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:motociclo_application_MYSQL_VB.emp_pageResources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

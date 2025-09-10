@@ -1,0 +1,44 @@
+==================================================
+           MOTOCICLO MOTORCYCLE SHOP
+==================================================
+
+Receipt #: 51
+Date: Jul 30, 2025
+Time: 06:43:22
+
+CUSTOMER INFORMATION:
+------------------------------
+Name: super customer
+Username: q
+
+BRANCH INFORMATION:
+------------------------------
+Branch: Paranaque City Branch
+Address: 123 OSPAR Ave.
+Phone: 09165745761
+
+ORDER DETAILS:
+------------------------------
+Model: K20 MODIFIED
+Brand: HIMO
+Quantity: 1
+Unit Price: ₱35,000.00
+Subtotal: ₱35,000.00
+
+==============================
+TOTAL: ₱35,000.00
+==============================
+
+PAYMENT INFORMATION:
+------------------------------
+Payment Method: cash
+Payment Status: paid
+Amount Paid: ₱35,000.00
+Change: ₱0.00
+Order Status: pending
+Delivery Date: Aug 04, 2025
+
+Thank you for your purchase!
+Please keep this receipt for your records.
+
+==================================================

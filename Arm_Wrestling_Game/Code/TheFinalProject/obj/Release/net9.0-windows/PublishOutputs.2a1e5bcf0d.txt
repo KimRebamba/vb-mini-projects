@@ -1,0 +1,5 @@
+C:\Users\Kim\Desktop\New folder (2)\TheFinalProject.exe
+C:\Users\Kim\Desktop\New folder (2)\TheFinalProject.dll
+C:\Users\Kim\Desktop\New folder (2)\TheFinalProject.deps.json
+C:\Users\Kim\Desktop\New folder (2)\TheFinalProject.runtimeconfig.json
+C:\Users\Kim\Desktop\New folder (2)\TheFinalProject.pdb
